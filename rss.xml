@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Mišković Barbershop</title>
+        <link>https://milosavljevichh.github.io/medigroup/index.html</link>
+        <description>Budite u toku sa novostima vezanim za usluge koje pružamo!</description>
+
+        <item>
+            <title>Naše usluge</title>
+            <link>https://milosavljevichh.github.io/medigroup/usluge.html</link>
+            <description>Novo u ponudi, paket šišanje otac i sin koje vam omogućava priličan popust!</description>
+        </item>
+        <item>
+            <title>Galerija</title>
+            <link>https://milosavljevichh.github.io/medigroup/usluge.html</link>
+            <description>Zadovoljstvo nam je da vam pokažemo nove zadovoljne mušterije, kao i naš kvalitetni pribor za rad!</description>
+        </item>
+    </channel>
+</rss>

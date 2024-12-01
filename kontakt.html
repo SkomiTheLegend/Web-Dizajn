@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Imate li pitanja ili želite rezervisati termin? Kontaktirajte nas danas za više informacija o uslugama koje pružamo. Posetite nas, ili zakažite vaš termin online." />
+  <meta name="keywords" content="zakažite, pitanje, online, termin, popunite formular" />
+  <meta name="author" content="Ivan Mišković" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> 
+  <link rel="shortcut icon" href="imgs/logoi/barbershop-logo-icon.ico" />
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="https://kit.fontawesome.com/8cb0e22533.js" crossorigin="anonymous"></script>
+  <title>Mišković Barbershop - Kontakt</title>
+</head>
+<body>
+  <header id="header">
+    <nav id="header-nav">
+      <div id="logo-holder">
+        <a href="index.html">
+          <img id="logo-header" src="imgs/logoi/barbershop-logo.png" alt="Mišković Barbershop Logo" />
+        </a>
+      </div>
+      <div id="nav-holder">
+        <ul id="header-list">
+          <li class="header-list-item">
+            <a class="header-nav-link" href="index.html">Početna</a>
+          </li>
+
+          <li class="header-list-item">
+            <a class="header-nav-link" href="o-nama.html">O nama</a>
+          </li>
+
+          <li class="header-list-item">
+            <a class="header-nav-link" href="galerija.html">Galerija</a>
+          </li>
+
+          <li class="header-list-item">
+            <a class="header-nav-link" href="kontakt.html">Kontakt</a>
+          </li>
+
+          <li class="header-list-item">
+            <a class="header-nav-link" href="autor.html">Autor</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="naslov-section">
+      <div id="naslov-section-holder">
+        <h1 class="naslov-section-heading">Kontakt</h1>
+      </div>
+    </section>
+
+    <section id="kontakt-section">
+      <h2 class="heading-line">Kontakt</h2>
+      <div id="kontakt-holder">
+        <div class="kontakt-side-left">
+          <div id="left-kontakt">
+            <div id="form-part-holder">
+              <h3 id="form-heading">Zakažite termin, ili nam postavite pitanje</h3>
+              <p id="form-para">Ako imate neko pitanje za nas, ili želite da zakažete vaš termin online popunite formular ispod</p>
+              <form action="podaci.php" method="POST" id="forma" name="forma">
+                <div id="form-holder">
+                  <div class="input-group">
+                    <label for="ime">Ime</label>
+                    <input type="text" id="ime" name="ime" placeholder="Petar" required />
+                  </div>
+
+                  <div class="input-group">
+                    <label for="prezime">Prezime</label>
+                    <input type="text" id="prezime" name="prezime" placeholder="Nikolic" required />
+                  </div>
+
+                  <div class="input-group">
+                    <label for="mail">E-Mail</label>
+                    <input type="email" id="mail" name="mail" placeholder="petar.nikolic@gmail.com" required />
+                  </div>
+
+                  <div class="input-group">
+                    <label for="telefon">Broj telefona</label>
+                    <input type="tel" id="telefon" name="telefon" placeholder="060323232" required />
+                  </div>
+                </div>
+
+                  <div id="last-btns-holder">
+                    <textarea id="Poruka" name="Poruka" rows="6" placeholder="Zakažite ili postavite pitanje"></textarea>
+                    <input type="submit" id="posalji" name="posalji" value="Pošalji" />
+                  </div>
+              </form>
+            </div>
+            <div id="img-part-holder"></div>
+          </div>
+        </div>
+        <div class="kontakt-side-right">
+          <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.3353986280936!2d20.482096976272615!3d44.814731371070856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a95dfdba1fb%3A0x7dd3ed9b437a11d6!2sZdravka%20%C4%8Celara%2016%2C%20Beograd%2011000!5e0!3m2!1sen!2srs!4v1732646414320!5m2!1sen!2srs" width="600px" height="580px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div id="footer-holder">
+      <div id="logo-col">
+        <a href="index.html">
+          <img id="logo-footer" src="imgs/logoi/barbershop-logo.png" alt="Mišković Barbershop Logo" />
+        </a>
+      </div>
+      <div id="kontakt-col">
+        <h4 class="footer-heading">Kontakt informacije</h4>
+        <address id="contact">
+          <ul class="footer-list">
+            <li><i class="fa-solid fa-location-dot"></i>Zdravka Čelara 16 Beograd</li>
+            <li>
+              <i class="fa-solid fa-phone"></i><a class="kontakt-link" href="tel:069323232">069323232</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i><a class="kontakt-link" href="mailto:miskobarber@gmail.com">miskobarber&#64;gmail.com</a>
+            </li>
+         </ul> 
+        </address>
+      </div>
+      <div id="radno-vreme-col">
+        <h4 class="footer-heading">Radno vreme</h4>
+        <ul class="footer-list">
+          <li>Ponedeljak - Petak: 09:00 - 23:00</li>
+          <li>Subota: 09:00 - 18:00</li>
+          <li>Nedelja: 09:00 - 18:00</li>
+       </ul>
+      </div>
+      <div id="mreze-col">
+        <h4 class="footer-heading">Društvene mreže</h4>
+        <a href="https://www.facebook.com/" target="_blank" class="footer-social"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" class="footer-social"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank" class="footer-social"><i class="fa-brands fa-youtube"></i></a>
+        <a href="rss.xml" class="footer-social" target="_blank"><i class="fa-solid fa-rss"></i></a>
+        <a href="sitemap.xml" class="footer-social" target="_blank"><i class="fa-solid fa-sitemap"></i></a>
+      </div>
+    </div>
+    <p id="copyright">All rights reserved &copy; by Ivan Mišković</p>
+  </footer>  
+</body>
+</html>

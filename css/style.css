@@ -1,0 +1,869 @@
+/***********    GLOBAL SETTINGS    ***********/
+/***********                       ***********/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes postepeniUpad {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes loopStrela {
+  0%{
+      bottom: -25px;
+  }
+  50%{
+      bottom: -50px;
+  }
+  100%{
+      bottom: -25px;
+  }
+}
+
+@keyframes levoDesno {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/***********    HEADER    ***********/
+/***********              ***********/
+
+#header {
+  padding: 12px 0;
+  background-color: #c8e6c9;
+  width: 100%;
+}
+
+.active {
+  border-bottom: 3px solid #0d47a1;
+}
+
+.active:hover {
+  border-bottom: none;
+}
+
+#header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+  animation: postepeniUpad 2s ease-in-out;
+}
+
+#logo-holder {
+  width: 23%;
+}
+
+#logo-header {
+  height: 50px;
+}
+
+#header-list {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+#nav-holder ul li .header-nav-link:link {
+  position: relative;
+}
+
+#nav-holder ul li .header-nav-link:link,
+#nav-holder ul li .header-nav-link:visited {
+  font-size: 21px;
+  font-weight: 500;
+  color: #000;
+}
+
+#nav-holder ul li .header-nav-link:hover,
+#nav-holder ul li .header-nav-link:active {
+  font-size: 21px;
+  font-weight: 500;
+  color: #000;
+}
+
+#nav-holder ul li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 3px;
+  background-color: #0d47a1;
+  transition: all 0.5s;
+}
+
+#nav-holder ul li a:hover::before {
+  width: 100%;
+}
+
+
+/***********    HERO SECTION    ***********/
+/***********                    ***********/
+
+.hero-section {
+  background-image: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)
+  ),
+  url('../imgs/hero-photo.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero-text-holder {
+  animation: postepeniUpad 2s ease-in-out;
+}
+
+#hero-heading {
+  font-size: 52px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#hero-para {
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+#btn-flex {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.hero-links:link,
+.hero-links:visited {
+  padding: 17px 34px;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #e67e22;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.hero-links:hover,
+.hero-links:active {
+  background-color: #cf711f;
+  transition: all 0.3s;
+}
+
+#arrow-loop .arrow {
+    font-size: 60px;
+    color: #fff;
+    position: relative;
+    text-shadow: 4px 4px 7px #000;
+    animation: loopStrela 2s infinite;
+}
+
+
+/***********    SECTION USLUGE    ***********/
+/***********                      ***********/
+
+#usluge-section {
+  padding: 80px 0;
+}
+
+.container-80 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#usluge-heading-holder {
+  margin-bottom: 20px;
+}
+
+.heading-secondary {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.heading-tertiary {
+  font-size: 25px;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#usluge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 60vh;
+
+}
+
+.usluge {
+  width: 22%;
+  height: 45vh;
+  background-image: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)
+  ),
+  url('../imgs/usluge/muško-šišanje.jpg');
+
+  background-size: cover;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 10px 15px 30px rgba(0,0,0,0.3);
+}
+
+.usluge:hover {
+  transform: translateY(15px);
+}
+
+.usluge2 {
+  background-image: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)
+  ),
+  url('../imgs/usluge/trimerovanje.jpg');
+
+  background-size: cover;
+}
+
+.usluge3 {
+  background-image: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)
+  ),
+  url('../imgs/usluge/kraljevsko-brijanje.jpg');
+
+  background-size: cover;
+}
+
+.usluge4 {
+  background-image: linear-gradient(
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.4)
+  ),
+  url('../imgs/usluge/pranje.jpg');
+
+  background-size: cover;
+}
+
+.usluge2, .usluge4 {
+  align-self: flex-end;
+}
+
+.usluge-content-holder {
+  position: absolute;
+  top: 65%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(180, 241, 11, 0.5);
+  padding: 7px 0;
+}
+
+.usluge-icon {
+  font-size: 30px;
+  color: #fff;
+  transform: rotate(-90deg);
+  margin-bottom: 10px;
+}
+
+.usluge-para {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+/***********    SECTION ENTERIJER    ***********/
+/***********                         ***********/
+
+.enterijer-section {
+  padding: 80px 0;
+}
+
+#enterijer-section-holder {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffcc80;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#enterijer-left-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#enterijer-left-text {
+  padding: 80px 80px;
+}
+
+.enterijer-para {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
+.enterijer-img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/***********    SECTION PRIOZVOD    ***********/
+/***********                        ***********/
+
+.proizvodi-section {
+  padding: 40px 0;
+  background-color: #f1f1f1;
+}
+
+.proizvodi-holder {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.heading-tertiary-proizvodi {
+  font-size: 25px;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+
+.proizvod-img {
+  height: 40px;
+}
+
+
+/***********    SECTION CENOVNIK    ***********/
+/***********                        ***********/
+
+#cenovnik-section {
+  padding: 80px 0;
+}
+
+#cenovnik-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.cenovnik-side {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cenovnik-full-content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+.cenovnik-main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cenovnik-para {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.para-dodatni {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
+.cena {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+
+
+/***********    FOOTER    ***********/
+/***********              ***********/
+
+#footer {
+  padding: 60px 0 20px 0;
+  background-color: #c8e6c9;
+}
+
+#footer-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#logo-footer {
+  height: 50px;
+}
+
+#logo-col {
+  align-self: center;
+}
+
+#copyright {
+  text-align: center;
+  border-top: 1px solid #000;
+  margin-top: 40px;
+}
+
+#mreze-col {
+  justify-self: end;
+}
+
+#radno-vreme-col {
+  justify-self: center;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.footer-list li i {
+  font-size: 20px;
+  color: #0d47a1;
+  margin: 0 15px 0 10px;
+}
+
+.footer-heading {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.kontakt-link:link,
+.kontakt-link:visited,
+.kontakt-link:hover,
+.kontakt-link:active {
+  font-size: 18px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.footer-social {
+  font-size: 25px;
+  margin: 10px;
+  color: #555;
+}
+
+.footer-list li {
+  font-size: 18px;
+}
+
+             /* DRUGA STRANICA */
+/***********    SECTION NASLOV    ***********/
+/***********                      ***********/
+
+#naslov-section-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('../imgs/sd.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  padding: 100px 0;
+}
+
+.naslov-section-heading {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 500;
+}
+
+/***********    SECTION NASA-PRICA    ***********/
+/***********                          ***********/
+
+.nasa-prica-section {
+  background-color: #f1f1f14f;
+  padding: 80px 0;
+}
+
+#nasa-prica-holder {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.heading-line {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.heading-line::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  margin: 8px auto;
+  display: block;
+  background-color: #0000ff;
+} 
+
+.prica-content-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+  margin-bottom: 100px;
+  animation: postepeniUpad 2s ease-in-out;
+}
+
+.prica-text-content {
+  align-self: center;
+}
+
+.prica-heading-tertiary {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.prica-para {
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.prica-img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 10px 10px 25px rgba(0,0,0,0.25);
+}
+
+/***********    SECTION TIM    ***********/
+/***********                   ***********/
+
+.tim-section {
+  padding: 20px 0 80px 0;
+}
+
+#zaposleni-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 35px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.zaposleni-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.zaposleni-img {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.zaposleni-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px rgba(200,30,30,0.9);
+}
+
+.zaposleni-socials {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, 0);
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.zaposleni-link:link,
+.zaposleni-link:hover,
+.zaposleni-link:visited,
+.zaposleni-link:active {
+  font-size: 25px;
+  padding: 5px 10px;
+}
+
+.zaposleni-link:active {
+  color: #ff0000;
+}
+
+.zaposleni-para {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+/***********    SECTION ISKUSTVA    ***********/
+/***********                        ***********/
+
+.iskustva-section {
+  padding: 80px 0;
+}
+
+#iskustva-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  width: 70%;
+  margin: 0 auto;
+  border: 6px dotted #000;
+  padding: 40px 20px;
+}
+
+.iskustvo-img-holder {
+  display: flex;
+  justify-content: center;
+}
+
+.iskustvo-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.iskustvo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.iskustvo-musterija-ime {
+  text-align: center;
+  color: #333;
+}
+
+.iskustvo-text {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+
+
+ 
+               /* TRECA STRANICA */
+/***********    SECTION GALERIJA    ***********/
+/***********                        ***********/
+
+.galerija-section {
+  padding: 80px 0;
+}
+
+#galerija-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 50px;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.galerija-item {
+  overflow: hidden;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+  animation: postepeniUpad 2s ease-in-out;
+}
+
+.galerija-img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.galerija-img:hover {
+  transform: scale(1.2);
+}
+
+               /* CETVRTA STRANICA */
+/***********    SECTION KONTAKT    ***********/
+/***********                       ***********/
+
+#kontakt-section {
+  padding: 80px 0;
+}
+
+#kontakt-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  width: 90%;
+  margin: 0 auto;
+  animation: postepeniUpad 2s ease-in-out;
+}
+
+.kontakt-side-right {
+  justify-self: end;
+}
+
+#left-kontakt {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #b2ebf2c5; 
+  box-shadow: 0 24px 45px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#form-part-holder {
+  padding: 30px;
+}
+
+#form-heading {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#form-para {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+#img-part-holder {
+  background-image: linear-gradient(
+    rgba(0,0,0, 0.3),
+    rgba(0,0,0, 0.3)
+  ),  
+  url('../imgs/form.jpg');
+  background-size: cover;
+}
+
+#form-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 24px;
+}
+
+form {
+  margin-top: 30px;
+}
+
+#mapa {
+  border-radius: 3px;
+}
+
+#last-btns-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+form input {
+  font-size: 14px;
+  padding: 6px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+textarea {
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+  color: black;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background-color: #66bb6a;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+
+               /* PETA STRANICA */
+/***********    SECTION AUTOR    ***********/
+/***********                     ***********/
+
+.autor-section {
+  padding: 80px 0;
+}
+
+#autor-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 70%;
+  margin: 0 auto;
+  column-gap: 90px;
+  animation: levoDesno 1s ease-out;
+}
+
+#autor-content-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.autor-article {
+  align-self: center;
+}
+
+.autor-img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.autor-info {
+  font-size: 18px;
+  line-height: 1.6;
+}
